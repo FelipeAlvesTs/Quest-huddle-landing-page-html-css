@@ -1,0 +1,165 @@
+html {
+    font-size: 62,5%;
+    background-image: url('../images/bg-desktop.svg');
+    background-color: var(--violet);
+    background-position: left;
+    height: 100vh;
+}
+@media (max-width: 425px) {
+    html {
+        background-image: url(../images/bg-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: top;
+    }
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin: 0 auto;
+}
+
+.header {
+    grid-area: header;
+    padding-inline: 70px;
+    margin-top: 20px;
+}
+
+.header a .logo {
+    width: 215px
+}
+
+@media (max-width: 425px) {
+    .header {
+        margin-top: 39px;
+        padding-left: 40px;
+    }
+
+    .header a .logo {
+        width: 155px
+    }
+}
+main {
+    display: grid;
+    grid: "ilustration info";
+    max-width: 1440px;
+    margin: 0 88px;
+    margin-top: 25px;
+}
+@media (max-width: 425px) {
+    main {
+        margin:0 20px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+    }
+}
+main .ilustration {
+    grid-area: ilustration;
+    margin-top: 15px;
+}
+main .ilustration img {
+    height: 95%;
+}
+
+@media (max-width: 425px) {
+    main .ilustration {
+        margin-top: 68px;
+    }
+    main .ilustration img{
+        max-width: 100%;
+    }
+}
+
+main .info {
+    grid-area: info;
+    color:#fff;
+    padding-top: 75px;
+    margin-left: 55px;
+    position: relative;
+}
+
+
+main .info h1 {
+    font-family: 'Poppins', sans-serif;
+    max-width: 450px;
+    font-size: 2.6rem;
+    padding-left: 9px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+main .info p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    padding-left: 9px;
+    padding-right: 160px;
+    font-size: 18px;
+    line-height: 1.7rem;
+    margin-bottom: 45px;
+}
+
+main .info .register {
+    color: var(--violet);
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: 0px 3px 0px #000;
+    margin-left: 9px;
+    padding: 16px 62px;
+    font-size: 20px;
+    text-align: center;
+}
+main .info .register:hover {
+    color: #fff;
+    background-color: var(--soft-magenta);
+    transition: 0.4s ease-in-out;
+}
+@media (max-width: 425px) {
+    main .info{
+        margin-left: 0;
+        padding-top: 35px;
+    }
+    main .info h1{
+        font-size: 2rem;
+    }
+    main .info p{
+        margin-bottom: 45px;
+    }
+    main .info .register {
+        padding: 16px 130px;
+    }
+}
+main .icons {
+    position: absolute;
+    right: 257px;
+    top: 565px;
+}
+
+main .icons a i:hover {
+    color: var(--soft-magenta);
+    border-color: var(--soft-magenta);
+    transition: 0.3s;
+}
+
+main .icons i:not(.fa-facebook-f) {
+    color: #fff;
+    margin-left: 10px;
+    padding: 10px;
+    border: #fff solid 2px;
+    border-radius: 50%;
+}
+
+.fa-facebook-f {
+    color: #fff;
+    margin-left: 10px;
+    padding: 10px 13px;
+    border: #fff solid 2px;
+    border-radius: 50%; 
+}
+@media (max-width: 425px) {
+    main .icons {
+        position: static;
+        margin: 80px 0;
+    }
+}
